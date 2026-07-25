@@ -1,8 +1,24 @@
-# declare a variable to store 1
-fact=1
-# accept Number from User
-n=int(input("Enter a Number to find the Factorial"))
-# using loop 
-for i in range(1,n+1):
-    fact=fact*i
-print("Factorial of number is =",fact)
+#include <iostream>   
+using namespace std; 
+int main() {
+     // Variable to store the input number
+     int n;                        
+     // Variable to store the factorial result
+     int factorial = 1;
+     // Ask the user to enter a number
+     cout << "Enter a positive integer: ";
+     cin >> n;
+     // Check if the number is negative
+     if (n < 0) {
+          cout << "Factorial is not defined for negative numbers.";
+     } 
+     else {
+          // Loop from 1 to n and multiply each number
+          for (int i = 1; i <= n; i++) {
+              factorial *= i;  // Multiply factorial by the current value of i
+     }
+     // Display the final factorial
+     cout << "Factorial of " << n << " = " << factorial;
+    }
+    return 0; 
+}
