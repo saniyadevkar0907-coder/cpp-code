@@ -1,10 +1,27 @@
-#declare two variables to store 0 and 1
-a=0
-b=1
-n=int(input("Enter a Number to find the Fibonacci series"))
-print(a)
-# using for loop 
-for i in range (n-1):
-    a,b=b,a+b
-# print the result
-    print(a)
+#include <iostream>   // Header file for input and output
+using namespace std;
+
+int main() {
+     // Variable to store the number of terms
+    int n;                 
+    int first = 0, second = 1, next;
+
+    // Ask the user to enter the number of terms
+    cout << "Enter the number of terms: ";
+    cin >> n;
+
+    // Print the Fibonacci series
+    cout << "Fibonacci Series: ";
+
+    for (int i = 1; i <= n; i++) {
+    // Print the current term
+
+        cout << first << " ";  
+        // Calculate the next term
+        next = first + second;
+        first = second;
+        second = next;
+    }
+
+    return 0;  
+}
