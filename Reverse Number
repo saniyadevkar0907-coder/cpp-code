@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, reverse = 0;  // n stores the number, reverse stores the reversed number
+
+    // Ask the user to enter a number
+    cout << "Enter a number: ";
+    cin >> n;
+
+    // Repeat until all digits of the number are processed
+    while(n > 0)
+    {
+        int digit = n % 10;  // Get the last digit of the number
+
+        reverse = reverse * 10 + digit;  // Add the digit to the reversed number
+
+        n = n / 10;  // Remove the last digit from the original number
+    }
+
+    // Display the reversed number
+    cout << "Reverse = " << reverse;
+
+    return 0;  
+}
