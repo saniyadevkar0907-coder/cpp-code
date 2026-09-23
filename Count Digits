@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, count = 0;  // n stores the number and count stores the number of digits
+
+    // Ask the user to enter a number
+    cout << "Enter a number: ";
+    cin >> n;
+
+    // Repeat until all digits are removed
+    while(n > 0)
+    {
+        count++;       // Increase count by 1 for each digit
+        n = n / 10;    // Remove the last digit from the number
+    }
+
+    // Display the total number of digits
+    cout << "Number of digits = " << count;
+
+    return 0; 
+}
